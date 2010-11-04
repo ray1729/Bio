@@ -1,0 +1,18 @@
+# Bio
+
+The beginnings of some tools for bioinformatics. Experimental and very
+immature: consider it my playground for now.
+
+## Usage
+
+I wouldn't, if I were you.
+
+## Installation
+
+git clone git@github.com:ray1729/Bio.git
+
+## License
+
+Copyright (C) 2010 FIXME
+
+Distributed under the Eclipse Public License, the same as Clojure.
