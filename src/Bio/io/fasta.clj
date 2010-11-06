@@ -1,5 +1,6 @@
-(ns bio.io.fasta
-  (:use [clojure.contrib.io :only (read-lines)]))
+(ns Bio.io.fasta
+  (:use [clojure.contrib.io :only (read-lines)]
+	[Bio.sequence :only (guess-alphabet)]))
 
 (defn- split-multiseq
   [lines]
@@ -11,7 +12,7 @@
 
 (defn read-fasta
   [f]
-  (split-multiseq (read-lines f)))
+  (map #(assoc % :alphabet (guess-alphabet (:seq %))) (split-multiseq (read-lines f))))
 
 (comment    
   ;; Fetch some FASTA from EnsEMBL and parse it
